@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Vazir;
+    src: url("./Vazir.ttf");
+}
+
+* {
+    font-family: Vazir, serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: #0a99cc;
+}
+
+li {
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+
+ul {
+    all: initial;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+li.hover::after{
+    position: absolute;
+    content: "";
+    border-radius: 5px 0 0 5px;
+    right: 0;
+    height: 40px;
+    width: 5px;
+    background-color: #fff;
+}
+
+@media screen and (min-width:576px) {
+
+    ul{
+        flex-direction: row;
+    }
+
+    li{
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    li.hover::after{
+        width: unset;
+        position: absolute;
+        border-radius: 5px 5px 0 0;
+        height: 3px;
+        left: 28px;
+        content: "";
+        bottom: 0px;
+        right: 28px;
+        background-color: #fff;
+    }
+}
